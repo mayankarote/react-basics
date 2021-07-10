@@ -60,8 +60,15 @@ export default function bookList() {
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
-      />
+      >
+          <p>
+        Lorem shdvsjdvcbxncxbcxzbcvxnbz
+        dsvdbscdbvsdcvsdcvsxcj
+        hdvnbcxvcvb
+      </p>
 
+      </Book>
+     
       <Book
         img={secondBook.img}
         title={secondBook.title}
@@ -72,19 +79,20 @@ export default function bookList() {
 }
 
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author, children } = props;
   return (
     <article className="book">
       <img src={img} />
       <h1>{title}</h1>
       <h1>{author}</h1>
+      <children/>
     </article>
   );
 };
 
 // or
 
-const Book = ({ img, title, author } ) => {
+const Book = ({ img, title, author,children } ) => {
   // const { img, title, author } = props;
   return (
     <article className="book">
